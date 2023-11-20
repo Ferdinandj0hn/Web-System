@@ -1,0 +1,225 @@
+/* Reset default margin and padding */
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-family: 'Lobster', sans-serif; /* Body text font */
+    transition: background-color 0.3s ease;
+    background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%);
+    font-family: "Luckiest Guy", cursive;
+}
+
+/* Navbar styles */
+nav {
+    background-color: rgba(0, 123, 255, 1);
+    padding: 10px 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: 'Pacifico', cursive;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #E8F1F8;
+}
+
+/* Underline effect on hover */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E8F1F8;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Container styles */
+.container {
+    text-align: justify;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+/* Section Heading styles */
+h2 {
+    color: #007bff;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Card styles */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #007bff;
+    font-family: 'Pacifico', cursive;
+}
+
+.card-text {
+    color: #666;
+}
+
+/* Featured Programs Image */
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+/* List Group styles */
+.list-group-item {
+    border: none;
+}
+
+label.required::after {
+    content: '*';
+    color: red;
+    margin-left: 4px;
+}
+
+.list-group-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Latest News Section */
+#latest-news {
+    margin-top: 20px;
+}
+
+/* Footer styles */
+.Footer1 {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    background-color: #ffffff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #000000;
+}
+
+/* Chat Icon styles */
+.chat-checkbox {
+    display: none;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.chat-link:hover {
+    background-color: #ffffff;
+}
+
+.chat-link img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Apply styles when chat window is open */
+.chat-checkbox:checked + .chat-icon .chat-link {
+    background-color: #fff;
+    border: 2px solid #fff;
+    opacity: 0.8;
+    transition: background-color 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+}
+
+/* Chat Window styles */
+.chat-window {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.chat-checkbox:checked + .chat-window {
+    display: block;
+}
+
+.close-chat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.chat-content {
+    padding: 20px;
+    overflow-y: auto;
+}
